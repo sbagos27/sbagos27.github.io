@@ -1,28 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="css-selectors.css" rel="stylesheet">
+    <style>
+        h1 {
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
 </head>
-<body>
-    
-</body>
-<h1>Contact Info</h1>
-    <a href= "index.html"> Home  </a>
-    <a href= "about.html"> About  </a>
-    <a href= "contact.html"> Contact </a>
-    <br>
-<p> Jandreoli@csumb.edu </p>
-<p> sbagos@csumb.edu </p>
-<p> varteaga-higueros@csumb.edu </p>
-<p> oaviles-saldana@csumb.edu </p>
 
-<div>
-    <footer> 
-        <hr>
-        CST336 Internet Programming. 2026 Team 1 <br>
-        <img src = "img/CSUMB_Logo.png" width="200" height="200">
-    </footer>
-</div>
+<body>
+    <h1>Contact Info</h1>
+
+    <div class="row">
+        <a class="space" href="index.html"> Home </a>
+        <a class="space" href="about.html"> About </a>
+        <a class="space" href="contact.html"> Contact </a>
+    </div>
+
+
+    <div class="row">
+        <p class="space"> Jandreoli@csumb.edu </p>
+        <p class="space"> sbagos@csumb.edu </p>
+        <p class="space"> varteaga-higueros@csumb.edu </p>
+        <p class="space"> oaviles-saldana@csumb.edu </p>
+    </div>
+
+    <div class="row" id ="content">
+        <iframe src ="https://forms.gle/tMGYPSVc6W7biNY98" width="640" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+
+    </div>
+    
+    <hr>
+    <div class="row">
+        <footer>
+            CST336 Internet Programming. 2026 Team 1
+            <br>
+            <img src="img/CSUMB_Logo.png" width="200" height="200">
+        </footer>
+    </div>
+</body>
+
 </html>

@@ -1,0 +1,58 @@
+body {
+    background-color: white;
+}
+
+h1 {
+    color: red;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: max(2vw, 4vw);
+    /* viewport width */
+    margin: 0 auto;
+}
+
+footer{
+    color:grey;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+.seasonFigure {
+    text-align:
+        center;
+    width: 40%
+}
+
+.seasonImage {
+    border: 1px solid yellow;
+    width: 100%;
+    height: auto;
+}
+
+#spring {
+    border-top-left-radius: 25px;
+}
+
+#summer {
+    border-top-right-radius: 25px;
+}
+
+#fall {
+    border-bottom-left-radius: 25px;
+}
+
+#winter {
+    border-bottom-right-radius: 25px;
+}
+
+.seasonTitles {
+    color: white;
+    font-size: max(2vw, 4vw);
+}
+
+.space {
+    margin-right: 10px;
+}
