@@ -11,8 +11,15 @@ h1 {
     margin: 0 auto;
 }
 
-footer{
-    color:grey;
+footer {
+    font-size: 0.8em;
+    color: gray;
+    text-align: center;
+}
+
+.active {
+    font-weight: bold;
+    border: 2px solid red;
 }
 
 .row {
@@ -20,39 +27,59 @@ footer{
     justify-content: center;
 }
 
-.seasonFigure {
-    text-align:
-        center;
-    width: 40%
-}
-
-.seasonImage {
-    border: 1px solid yellow;
-    width: 100%;
-    height: auto;
-}
-
-#spring {
-    border-top-left-radius: 25px;
-}
-
-#summer {
-    border-top-right-radius: 25px;
-}
-
-#fall {
-    border-bottom-left-radius: 25px;
-}
-
-#winter {
-    border-bottom-right-radius: 25px;
-}
-
-.seasonTitles {
-    color: white;
-    font-size: max(2vw, 4vw);
+a:hover {
+    background-color: lightgray;
 }
 
 .space {
     margin-right: 10px;
+}
+
+.column {
+    flex-direction: column;
+    align-items: center;
+}
+
+.center-list {
+    list-style-position: inside;
+    text-align: center;
+    padding: 0;
+}
+
+.table {
+    border-collapse: collapse;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+}
+
+.table td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid blue;
+}
+
+.table tr:hover {
+    background-color: red;
+}
+
+.quote {
+    flex-direction: column;
+    align-items: center;
+}
+
+.quote-text {
+    font-style: italic;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.quote-author {
+    font-style: normal;
+    font-size: 1em;
+    text-align: center;
+}
+
+.csumb-logo {
+    width: 200px;
+    height: 200px;
 }
