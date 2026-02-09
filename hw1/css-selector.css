@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    line-height: 1.6;
 }
 
 header {
@@ -17,6 +18,7 @@ nav {
     justify-content: space-around;
     background-color: gray;
     padding: 10px;
+    gap: 10px;
 }
 
 nav a {
@@ -46,6 +48,7 @@ img {
     max-width: 400px;
     display: block;
     margin: 15px auto;
+    border: 1px solid #ccc;
 }
 
 footer {
@@ -54,4 +57,5 @@ footer {
     text-align: center;
     background-color: grey;
     color: white;
+    font-size: 14px;
 }
