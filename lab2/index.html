@@ -20,6 +20,19 @@
     </header>
 
     <div class="center">
+        <h2>Guess a number between 1 and 99</h2>
+    </div>
+
+    
+    <p  class="center" id="wins">
+            Wins: 0
+    </p>
+
+    <p class="center" id="loses">
+        Loses: 0
+    </p>
+
+    <div class="center">
         Guess:
         <!-- creates a text box -->
         <input id="userGuess" type="text" size="3">
@@ -27,13 +40,14 @@
         <br>
 
         <button id="guessBtn" class="center"> Guess! </button>
+        <button id="retryBtn" class="center"> Retry! </button>
 
-        Previous Guesses:
-        <span id="userGuesses"> </span>
     </div>
 
-    <div class>
-        <input id="userGuess" type="text" size="3">
+    <br>
+
+    <div class="center">
+        Previous Guesses:         <span id="userGuesses"> </span>
     </div>
 
     <h1 id="highLow">
