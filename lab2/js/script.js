@@ -8,6 +8,8 @@ let loses = 0;
 let MAX_GUESS = 7;
 let attempt = 0;
 let win = false;
+let gameNumber = 1;
+let gameHistory = [];
 
 let randomNumber = Math.floor(Math.random() * 99) + 1;
 console.log(randomNumber);
@@ -63,6 +65,8 @@ function congrats() {
     document.querySelector("#highLow").style.backgroundColor = "black";
     wins++;
     document.querySelector("#wins").textContent = "Wins: " + wins;
+    gameHistory = document.querySelector("#userGuesses").textContent.trim().split(" ");
+    gameHistories();
     replayButton();
 }
 
@@ -84,6 +88,8 @@ function lose() {
     document.querySelector("#highLow").style.backgroundColor = "grey";
     loses++;
     document.querySelector("#loses").textContent = "Loses: " + loses;
+    gameHistory = document.querySelector("#userGuesses").textContent.trim().split(" ");
+    gameHistories();
     replayButton();
 }
 
@@ -105,12 +111,14 @@ function winner() {
     document.querySelector("#highLow").style.backgroundColor = "grey";
 }
 
-function replayButton(){
+function replayButton() {
     document.querySelector("#guessBtn").style.display = "none";
     document.querySelector("#retryBtn").style.display = "inline";
 }
 
-function initGame(){
+function initGame() {
+    document.querySelector("#userGuesses").textContent = "";
+    gameHistory = [];
     document.querySelector("#guessBtn").style.display = "inline";
     document.querySelector("#retryBtn").style.display = "none";
     attempt = 0;
@@ -118,4 +126,15 @@ function initGame(){
 
     randomNumber = Math.floor(Math.random() * 99) + 1;
     console.log(randomNumber);
+}
+
+function gameHistories(){
+    if (gameHistory.length > 0) {
+        const p = document.createElement("p");
+        p.textContent = `Game ${gameNumber}: ${gameHistory.join(", ")}`;
+
+        document.querySelector("#gameHistory").append(p);
+
+        gameNumber++;
+    }
 }
