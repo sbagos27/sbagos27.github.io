@@ -1,6 +1,15 @@
 document.querySelector("#submitBtn").addEventListener("click", gradeQuiz);
 
 shuffleQ1Choices();
+loadTimesTaken();
+
+function loadTimesTaken() {
+    let times = localStorage.getItem("quizTaken");
+    if (times == null) {
+        times = 0;
+    }
+    document.querySelector("#timesTaken").textContent = "Times Taken: " + times;
+}
 
 function shuffleQ1Choices() {
     let q1Choices = ["2", "4", "22", "0"];
@@ -67,34 +76,33 @@ function gradeQuiz() {
         score += 20;
         // alert("THE ANSWER 4 IS RIGHT")
         // make font green
-        document.querySelector("#q1ChoicesDiv").style.backgroundColor = "green";
+        showResult("q1", true);
     } else {
-        // make the font red
-        document.querySelector("#q1ChoicesDiv").style.backgroundColor = "red";
+        showResult("q1", false);
     }
 
     if (userAnswer2 == answerQ2) {
         score += 20;
        // alert("THE ANSWER 16 IS RIGHT")
-        document.querySelector("#q2").style.backgroundColor = "green";
+        showResult("q2", true);
     } else {
-        document.querySelector("#q2").style.backgroundColor = "red";
+        showResult("q2", false);
     }
 
     if (userAnswer3 == answerQ3) {
         score += 20;
         // alert("THE ANSWER 22 IS RIGHT")
-        document.querySelector("#q3").style.backgroundColor = "green";
+        showResult("q3", true);
     } else {
-        document.querySelector("#q3").style.backgroundColor = "red";
+        showResult("q3", false);
     }
 
     if (userAnswer4 == answerQ4) {
         score += 20;
         // alert("THE ANSWER 2.5 IS RIGHT")
-        document.querySelector("#q4").style.backgroundColor = "green";
+        showResult("q4", true);
     } else {
-         document.querySelector("#q4").style.backgroundColor = "red";
+        showResult("q4", false);
     }
 
     console.log("userAnswer5a = " + userAnswer5a)
@@ -105,10 +113,41 @@ function gradeQuiz() {
     if (userAnswer5a == answerQ5a && userAnswer5b == answerQ5b) {
         score += 20;
         // alert("THE ANSWERS 2 AND --2 ARE RIGHT")
-        document.querySelector("#q5").style.backgroundColor = "green";
+        showResult("q5", true);
     } else {
-        document.querySelector("#q5").style.backgroundColor = "red";
+        showResult("q5", false);
     }
 
     alert("YOU SCORE " + score + "/100")
+
+    if(score >= 80){
+        document.querySelector("#congrats").style.display = "block"
+        document.querySelector("#congrats").textContent =
+        "CONGRATS YAY!";
+    } else {
+        document.querySelector("#congrats").style.display = "none"
+    }
+
+    let times = localStorage.getItem("quizTaken");
+    if (times == null) {
+        times = 0;
+    }
+    times++;
+    localStorage.setItem("quizTaken", times);
+    document.querySelector("#timesTaken").textContent = "Times Taken: " + times;
+}
+
+function showResult(question, isCorrect) {
+    let feedback = document.querySelector("#" + question + "Feedback");
+    let img = document.querySelector("#" + question + "Img");
+
+    if (isCorrect) {
+        feedback.textContent = " Correct!";
+        feedback.style.color = "green";
+        img.src = "images/r.jpg";
+    } else {
+        feedback.textContent = " Incorrect!";
+        feedback.style.color = "red";
+        img.src = "images/w.jpg";
+    }
 }

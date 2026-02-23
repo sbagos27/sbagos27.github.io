@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=`, initial-scale=1.0">
     <title>Lab 3 Quiz</title>
+    <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
     <script src="https://unpkg.com/underscore@1.13.7/underscore-umd-min.js"></script>
 
@@ -13,6 +14,8 @@
 <body>
 
     <h1>CSS Quiz</h1>
+
+    <p id="timesTaken"></p>
     
     <!-- Radio -->
     1. What's 2+2
@@ -23,12 +26,17 @@
     <!-- check box uses id in place of name -->
 
     <div id="q1ChoicesDiv"></div>
+    <span id="q1Feedback"></span>
+    <img id="q1Img" width="20">
 
     <br>
     <!-- Input Box -->
     2. What 4x4?
     <br>
     <input type="text" id="q2">
+    <br>
+    <span id="q2Feedback"></span>
+    <img id="q2Img" width="20">
     <br>
     <br>
 
@@ -41,6 +49,8 @@
             <option> 9 </option>
             <option> 21 </option>
     </select></label>
+    <span id="q3Feedback"></span>
+    <img id="q3Img" width="20">
     <br>
     <br>
     
@@ -48,26 +58,30 @@
     4. What is 10 / 4? (In decimal)
     <br>
     <label>
-        Text Size:
         <input id="q4" type="number" min="0" max="100" step="0.1">
     </label>
+    <span id="q4Feedback"></span>
+    <img id="q4Img" width="20">
     <br>
-    <br> 
     
     <!-- checkBox -->
     <p id="q5">
         5. What's -1 - 1?
     </p>
-    <br>
     <label><input type="checkbox" id="q5a" value="--2"> --2 </label>
     <label><input type="checkbox" id="q5b" value="2"> 2 </label>
     <label><input type="checkbox" id="q5c" value="-1"> -1 </label>
     <label><input type="checkbox" id="q5d" value="0"> 0 </label>
+    <span id="q5Feedback"></span>
+    <img id="q5Img" width="20">
     
     <br>
     <br>
     
     <button id="submitBtn">Submit Quiz</button>
+
+    <h2 id="congrats"></h2>
+
 </body>
 
 </html>
