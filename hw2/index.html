@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gamble Away</title>
+    <script src="js/script.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>GAMBLE AWAY UR LIFE SAVINGS PLEASE</h1>
+    
+    <div id="balanceDisplay">Balance: $0</div>
+
+    <div> Give me YOUR MONEY
+        <input id="balanceNumber" type="number" min="10" max="10000" step="10">
+        <button id="balanceBtn"> Add Balance</button>
+    </div>
+
+    <label>
+        Enter Range Max:
+        <input id="rangeMax" type="number" min="10" max="1000">
+    </label>
+
+    <br><br>
+
+    <label>
+        Place Bet:
+        <input id="bet" type="number" min="1">
+    </label>
+    <br><br>
+    <p id="currentNumber">There's a random number, Guess!</p>
+    <p id="previousNumber"> previousNumber</p>
+
+    <button id="higherBtn">Higher</button>
+    <button id="lowerBtn">Lower</button>
+    <button id="equalBtn">Equal</button>
+
+    <h2 id="result"></h2>
+
+    <img id="resultImage" src="" alt="result image">
+</body>
+</html>
