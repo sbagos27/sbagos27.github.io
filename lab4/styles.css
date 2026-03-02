@@ -1,0 +1,37 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(227, 227, 227);
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    color: black;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+input,select {
+    padding: 5px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+span {
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+fieldset{
+    text-align: left;
+    width: 400px;
+    margin: auto;
+}
+
+legend{
+    text-align: center;
+}
